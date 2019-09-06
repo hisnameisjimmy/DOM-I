@@ -44,7 +44,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let nav = document.querySelectorAll("nav a");
 nav.forEach(function(item, index) {
   item.textContent = siteContent["nav"]["nav-item-" + index];
+  item.style.color = "green";
 })
+
+let appendNav = document.createElement("a");
+let prependNav = document.createElement("a");
+let navMenu = document.querySelector("nav");
+navMenu.appendChild(appendNav);
+navMenu.prepend(prependNav);
+appendNav.textContent = "whatever";
+prependNav.textContent = "blaaaah";
 
 let cta_h1 = document.querySelector(".cta-text h1");
 cta_h1.textContent = siteContent["cta"]["h1"];
