@@ -40,3 +40,43 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.querySelectorAll("nav a");
+nav.forEach(function(item, index) {
+  item.textContent = siteContent["nav"]["nav-item-" + index];
+})
+
+let cta_h1 = document.querySelector(".cta-text h1");
+cta_h1.textContent = siteContent["cta"]["h1"];
+
+let cta_button = document.querySelector(".cta-text button");
+cta_button.textContent = siteContent["cta"]["button"];
+
+let cta_image = document.getElementById("cta-img");
+cta_image.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let topContent = document.querySelectorAll(".top-content .text-content");
+topContent[0].childNodes[1].textContent = siteContent["main-content"]["features-h4"];
+topContent[0].childNodes[3].textContent = siteContent["main-content"]["features-content"];
+topContent[1].childNodes[1].textContent = siteContent["main-content"]["about-h4"];
+topContent[1].childNodes[3].textContent = siteContent["main-content"]["about-content"];
+
+let middle_image = document.getElementById("middle-img");
+middle_image.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let bottomContent = document.querySelectorAll(".bottom-content .text-content");
+bottomContent[0].childNodes[1].textContent = siteContent["main-content"]["services-h4"];
+bottomContent[0].childNodes[3].textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].childNodes[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContent[1].childNodes[3].textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].childNodes[1].textContent = siteContent["main-content"]["vision-h4"];
+bottomContent[2].childNodes[3].textContent = siteContent["main-content"]["vision-content"];
+
+let contactContent = document.querySelectorAll(".contact");
+contactContent[0].childNodes[1].textContent = siteContent["contact"]["contact-h4"];
+contactContent[0].childNodes[3].textContent = siteContent["contact"]["address"];
+contactContent[0].childNodes[5].textContent = siteContent["contact"]["phone"];
+contactContent[0].childNodes[7].textContent = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
